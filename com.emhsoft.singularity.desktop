@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+
+Name=Endgame: Singularity
+Comment= A simulation of a true AI
+Comment[de]=Simulation einer echten KI
+Categories=Game;Simulation;
+
+Icon=com.emhsoft.singularity
+Exec=singularity
+Terminal=false

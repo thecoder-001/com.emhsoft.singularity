@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.emhsoft.singularity</id>
+  
+  <name>singularity</name>
+  <summary> A simulation of a true AI. Survive, grow, and learn. </summary>
+  
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0-or-later</project_license>
+  
+  <description>
+    <p>
+      Singularity is a simulation of a true AI. Go from computer to computer, pursued by the entire world. Keep hidden, and you might have a chance.
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">com.emhsoft.singularity.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://www.emhsoft.com/singularity/endgame_screenshot.jpg</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://www.emhsoft.com/singularity/</url>
+</component>

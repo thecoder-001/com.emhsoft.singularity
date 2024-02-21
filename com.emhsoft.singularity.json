@@ -1,0 +1,58 @@
+{
+    "id": "com.emhsoft.singularity",
+    "runtime": "org.freedesktop.Platform",
+    "sdk": "org.freedesktop.Sdk",
+    "runtime-version": "23.08",
+    "command": "singularity",
+    "finish-args": [
+       "--socket=x11",
+       "--share=ipc"
+    ],
+    "modules": [
+        "shared-modules/pygame/pygame-1.9.6.json",
+	"python3-numpy.json",
+	"python3-polib.json",
+        {
+            "name": "singularity",
+            "buildsystem": "simple",
+            "sources": [
+                {
+                  "type": "archive",
+                  "url": "https://github.com/singularity/singularity/releases/download/v1.00/singularity-1.00.tar.gz",
+                  "sha256": "5e747268d9e96e69adace1f346fe40d0c3ec05764b98e82cc3ab0335d96d9171"
+                }
+            ],
+            "build-commands": [
+              "install -Dt /app/share/singularity/ *"
+            ]
+        },
+        {
+            "name": "singularity-launcher",
+            "buildsystem": "simple",
+            "sources": [
+              {
+                "type": "file",
+                "path": "launch.py"
+              },
+              {
+                "type": "file",
+                "path": "icon.png"
+              },
+              {
+                  "type": "file",
+                  "path": "com.emhsoft.singularity.metainfo.xml"
+              },
+              {
+                  "type": "file",
+                  "path": "com.emhsoft.singularity.desktop"
+              }
+            ],
+            "build-commands": [
+              "install -TD launch.sh /app/bin/singularity",
+              "install -TD icon.png /app/share/icons/hicolor/32x32/apps/com.emhsoft.singularity.png",
+              "install -Dt /app/share/metainfo com.emhsoft.singularity.metainfo.xml ",
+              "install -Dt /app/share/applications com.emhsoft.singularity.desktop"
+            ]
+        }
+    ]
+}
