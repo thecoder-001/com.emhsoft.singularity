@@ -32,6 +32,21 @@
             ]
         },
         {
+            "name": "singularity-music",
+            "buildsystem": "simple",
+            "sources": [
+                {
+                  "type": "archive",
+                  "url": "https://emhsoft.com/singularity/endgame-singularity-music-007.zip",
+                  "sha256": "eb5a3c2730731fda0cc7861977cd97937950b85d3fe08bc431054a639cc2c26d"
+                }
+            ],
+            "build-commands": [
+              "mkdir /app/share/singularity-1.00/singularity/music",
+              "cp -r * /app/share/singularity-1.00/singularity/music"
+            ]
+	},
+        {
             "name": "singularity-launcher",
             "buildsystem": "simple",
             "sources": [
