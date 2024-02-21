@@ -9,7 +9,8 @@
        "--share=ipc",
        "--socket=wayland",
        "--device=dri",
-       "--socket=pulseaudio"
+       "--socket=pulseaudio",
+       "--filesystem=xdg-data/singularity/music"
     ],
     "modules": [
         "shared-modules/pygame/pygame-1.9.6.json",
