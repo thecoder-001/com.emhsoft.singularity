@@ -7,7 +7,8 @@
     "finish-args": [
        "--socket=x11",
        "--share=ipc",
-       "--socket=wayland"
+       "--socket=wayland",
+       "--socket=pulseaudio"
     ],
     "modules": [
         "shared-modules/pygame/pygame-1.9.6.json",
